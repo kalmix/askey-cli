@@ -601,11 +601,23 @@ fn run_selector(
                     }
 
                     if key.code == KeyCode::Char('?') {
+                        std::thread::sleep(Duration::from_millis(15));
+                        if event::poll(Duration::from_millis(0)).unwrap_or(false) {
+                            paste_buffer.push('?');
+                            last_key_time = Instant::now();
+                            continue;
+                        }
                         show_help_dialog = true;
                         continue;
                     }
 
                     if key.code == KeyCode::Char('c') || key.code == KeyCode::Char('C') {
+                        std::thread::sleep(Duration::from_millis(15));
+                        if event::poll(Duration::from_millis(0)).unwrap_or(false) {
+                            paste_buffer.push(if key.code == KeyCode::Char('c') { 'c' } else { 'C' });
+                            last_key_time = Instant::now();
+                            continue;
+                        }
                         temp_config = load_or_create_config().unwrap_or_default();
                         active_config_item = 0;
                         show_config_screen = true;
