@@ -310,6 +310,13 @@ fn main() -> anyhow::Result<()> {
 
     let is_minimal_mode = !(cli.dashboard || is_fetch || config.default_dashboard);
     let mut stdout = io::stdout();
+
+    use std::io::IsTerminal;
+    if !stdout.is_terminal() {
+        println!("askey: Terminal is not interactive. Use 'askey --help' for usage.");
+        return Ok(());
+    }
+
     terminal::enable_raw_mode()?;
     execute!(
         stdout,
