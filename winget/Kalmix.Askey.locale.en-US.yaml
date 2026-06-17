@@ -21,8 +21,5 @@ Tags:
   - play
   - converter
 ReleaseNotesUrl: https://github.com/kalmix/askey-cli/releases/tag/v0.1.0
-Icons:
-  - IconUrl: https://raw.githubusercontent.com/kalmix/askey-cli/main/.github/assets/iconLogo.png
-    IconFileType: png
 ManifestType: defaultLocale
 ManifestVersion: 1.6.0
