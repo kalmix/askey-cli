@@ -7,6 +7,6 @@ Commands:
 Installers:
   - Architecture: x64
     InstallerUrl: https://github.com/kalmix/askey-cli/releases/download/v0.1.0/askey.exe
-    InstallerSha256: 20cb7f23d439d327fc508b15009efd27e08635c1fcbfd6c72165cd487d0640c2
+    InstallerSha256: a74d2efa68e8b6763f28664ffb5fd17f9cae8ffe5e8ea536011e79989fbfe1f1
 ManifestType: installer
 ManifestVersion: 1.6.0
